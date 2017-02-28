@@ -31,8 +31,6 @@
             
             [self preparePlayback];
         }
-        
-        
     }
     return self;
 }
