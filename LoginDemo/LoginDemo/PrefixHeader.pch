@@ -1,0 +1,89 @@
+//
+//  PrefixHeader.pch
+//  环信Demo
+//
+//  Created by 邝子涵 on 2017/2/24.
+//  Copyright © 2017年 邝子涵. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+//#define SCREEN_WIDTH 
+
+
+#endif /* PrefixHeader_pch */
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <MediaPlayer/MediaPlayer.h>
+#import <AVFoundation/AVFoundation.h>
+
+
+
+// 3rdparty
+#import "Masonry.h"
+
+// Category
+#import "UITextField+ExtentRange.h"
+#import "UITextField+Extension.h"
+#import "UIImage+Scale.h"
+#import "UIView+Extension.h"
+
+
+// Base Class
+#import "KZHBaseNavigationController.h"
+#import "KZHBaseViewController.h"
+#import "KZHBaseTabBarController.h"
+
+
+//
+#import "KZHLogo.h"
+
+
+
+// 全局常量
+#import "LoginConst.h"
+
+// 工具类
+#import "KZHMaskLayer.h"            // 圆角
+#import "KZHShowMessage.h"          // 提示框
+
+
+// 屏幕宽度
+#define SCREEN_WIDTH      [UIScreen mainScreen].bounds.size.width
+// 屏幕高度
+#define SCREEN_HEIGHT     [UIScreen mainScreen].bounds.size.height
+
+
+// 适配宽
+#define AD_WIDTH(S)       (SCREEN_WIDTH / (375.0 / S))
+// 适配高
+#define AD_HEIGHT(S)      (SCREEN_HEIGHT / (667.0 / S))
+
+
+
+// 提示框
+#define SHOW(message)      [KZHShowMessage showMessage:message];
+
+
+
+
+// RGB
+#define RGBA(R, G, B, A)  [UIColor colorWithRed:R / 255.0 green:G / 255.0 blue:B / 255.0 alpha:A]
+
+
+// 颜色
+#define KZH_Black RGBA(30, 30, 30, 1)
+
+
+
+// 字体
+#define KZHFONT_12        [UIFont systemFontOfSize:12.]
+#define KZHFONT_14        [UIFont systemFontOfSize:14.]
+#define KZHFONT_16        [UIFont systemFontOfSize:16.]
+
+
+
+#endif
